@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Julius+Sans+One&family=Redressed&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    width: 1600px;
+    height: 727px;
+    padding: 70px 0px 20px 0px;
+    background-color: #f3f3ff;
+}
+
+.backArrow {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    transform: translate(-5%,0);
+}
+
+.backArrow a img {
+    width: 30px;
+    height: 30px;
+}
+
+.contain {
+    width: 800px;
+    height: auto;
+    margin: auto;
+}
+
+.headerContain {
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.headerContain h1 {
+    font-family: 'Redressed', cursive;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.headUp {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 20px;
+}
+
+.headDown {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 18px;
+}
+
+.struk {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 18px;
+}
+
+.struk ul {
+    list-style: none;
+}
+
+.idStruk1 {
+    margin-top: 10px;
+}
+
+.idStruk2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.containStruk1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.containStruk2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.containStruk3 {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c5c5c5
+}
+
+.footerStruk {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 18px;
+}
+
+.footerStruk ul {
+    list-style: none;
+}

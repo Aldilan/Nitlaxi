@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Julius+Sans+One&family=Redressed&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    width: 1600px;
+    height: auto;
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    height: 767px;
+    position: sticky;
+    top: 0;
+    transition: 0.5s;
+    border-right: 2px solid #BAA090;
+}
+
+.marginLeftSidebar {
+    margin-left: -240px;
+}
+
+.rotateArrowSidebar {
+    transform: rotate(180deg);
+}
+
+.headerSidebar {
+    width: 270px;
+    height: 30px;
+    background-color: #080C2C;
+    padding: 15px;
+    border-bottom: 1px solid #BAA090;
+}
+
+.headerSidebar h1 {
+    margin: 3px 0px 0px 3px;
+    float: left;
+    font-size: 20px;
+    font-family: 'Redressed', cursive;
+    color: white;
+    cursor: default;
+    background: linear-gradient(to right, white 50%, #BAA090 50%, white);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
+.headerSidebar h1:hover {
+    background-position: -100%;
+}
+
+.headerSidebar a img {
+    width: 30px;
+    height: 30px;
+    float: right;
+    transition: 0.5s;
+}
+
+.headerSidebar a img:hover {
+    transform: rotate(90deg);
+}
+
+.menuSidebar {
+    width: 100%;
+    height: 500px;
+}
+
+.sidebarLeft {
+    width: 210px;
+    height: 100%;
+    background-color:  #000F2A;
+    float: left;
+    padding: 0px 15px 0px 15px;
+}
+
+.sidebarLeft ul {
+    list-style: none;
+}
+
+.sidebarLeft ul li {
+    margin-top: 55px;
+}
+
+.sidebarLeft ul li a {
+    text-decoration: none;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #BAA090;
+    transition: 0.5s;
+}
+
+.sidebarLeft ul li a:hover {
+    color: white;
+}
+
+.active {
+    border-bottom: 1px solid #BAA090;
+}
+
+.sidebarRight {
+    width: 30px;
+    height: 100%;
+    background-color:  #000F2A;
+    padding: 0px 15px 0px 15px;
+    float: right;
+}
+
+.sidebarRight ul {
+    list-style: none;
+}
+
+.sidebarRight ul li {
+    margin-top: 40px;
+}
+
+.sidebarRight ul li a img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebarRight ul li a img:hover {
+    opacity: 70%;
+}
+
+.footerSidebar {
+    width: 100%;
+    height: 206px;
+    background-color:  #000F2A;
+    display: flex;
+    justify-content: center;
+}
+
+.footerSidebar small {
+    align-self: flex-end;
+    margin-bottom: 30px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 12px;
+    color: #BAA090;
+}
+
+.contain {
+    width: 1300px;
+    height: auto;
+    background-color: #F3F3F3;
+    transition: 0.5s;
+    padding-bottom: 32px;
+}
+
+.containSlide {
+    width: 1540px;
+}
+
+.successNotif {
+    margin: auto;
+    width: 1200px;
+    height: auto;
+    padding: 15px 8px 15px 8px;
+    background-color: white;
+    border-bottom: 4px solid #46a53f;
+    border-radius: 2%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: 0.5s;
+    box-shadow:  5px 8px 12px #888888;
+}
+
+.successNotif span {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: black;
+    cursor: default;
+}
+
+.failNotif {
+    margin: auto;
+    width: 1200px;
+    height: auto;
+    padding: 15px 8px 15px 8px;
+    background-color: white;
+    border-bottom: 4px solid #A71238;
+    border-radius: 2%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow:  5px 8px 12px #888888;
+    transition: 0.5s;
+}
+
+.failNotif span {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: black;
+    cursor: default;
+}
+
+.failSuccessNotifSlide {
+    width: 1440px;
+}
+
+#closeNotif {
+    margin: 5px 10px 0px 0px;
+    background-color: transparent;
+    border: 0px;
+    float: right;
+    cursor: pointer;
+    transition: 0.5s;
+    color: black;
+}
+
+#closeNotif:hover {
+    font-weight: bold;
+    box-shadow: 0 0 13px #BAA090;
+    color: #BAA090;
+}
+
+.headerContain, .homeContain {
+    width: auto;
+    height: 20px;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid #c0c0c0;
+}
+
+.headerContain h1, .homeContain h1 {
+    float: left;
+    margin-left: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+.headerContain span, .homeContain span {
+    float: right;
+    margin-right: 20px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 15px;
+}
+
+.GNQContain {
+    width: auto;
+    height: auto;
+    margin: 30px 20px 10px 20px;
+}
+
+.GNQContain h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+}
+
+.GNQContain small {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 15px;
+}
+
+.cardContain {
+    width: 360px;
+    height: 550px;
+    background-color: white;
+    margin: 12.5px 0px 12.5px 13.5px;
+    display: inline-block;
+    border: 2px solid #BAA090;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.cardContain img {
+    width: 200px;
+    height: 200px;
+    margin: 80px 80px 0px 80px;
+}
+
+.cardContain h1 {
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    margin-top: 60px;
+    font-size: 20px;
+}
+
+.cardContain p {
+    font-size: 15px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin-bottom: 110px;
+}
+
+.cardContain a {
+    color: #BAA090;
+    text-decoration: none;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.cardContain a:hover {
+    border-bottom: 1px solid #BAA090;
+}
+
+.dataTable {
+    width: 1250px;
+    height: auto;
+    padding-left: 20px;
+    transition: 0.5s;
+    margin-top: 50px;
+}
+
+.dataTableSlide {
+    width: 1490px;
+}
+
+.dataTable h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.tambahDataLink {
+    text-decoration: none;
+    color: black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+.tambahDataLink:hover {
+    color: #46a53f;
+}
+
+.dataTable table {
+    margin-top: 10px;
+    border: 2px solid #BAA090;
+    border-radius: 2%;
+    background-color: white;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.dataTable table tr th {
+    text-align: center;
+    font-size: 16px;
+}
+
+.dataTable table tr td {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.dataTable table tr td img {
+    width: 40px;
+    height: 40px;
+}
+
+.dataTable table tr td a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    transition: 0.5s;
+}
+
+.dataTable table tr td button {
+    font-size: 14px;
+    background-color: transparent;
+    border: 0px;
+    color: black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    transition: 0.5s;
+}
+
+.editDataLink:hover {
+    color: #FCCF14;
+}
+
+#deleteData {
+    cursor: pointer;
+}
+
+#deleteData:hover {
+    color: #A71238;
+}
+
+.displayNone {
+    display: none;
+}
+
+.tambahData , .editData{
+    width: 1250px;
+    height: auto;
+    padding-left: 20px;
+    transition: 0.5s;
+    margin-top: 50px;
+}
+
+.tambahDataSlide , .editDataSlide{
+    width: 1490px;
+}
+
+.tambahData h1 , .editData h1{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.tambahData table , .editData table{
+    margin-top: 10px;
+    border: 2px solid #BAA090;
+    border-radius: 2%;
+    background-color: white;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.tambahData table tr td , .editData tr td{
+    padding: 20px;
+    font-size: 14px;
+}
+
+.tambahData table tr td input, #fasilitas_id, .editData table tr td input{
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin: 0px 5px 0px 5px;
+}
+
+.tambahData table tr td textarea , .editData table tr td textarea{
+    margin: 5px 5px 5px 5px;
+    padding: 15px 20px 15px 20px;
+    font-size: 14px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.tambahData table tr td ul , .editData table tr td ul{
+    list-style: none;
+}
+
+.tambahData table tr td button , .editData table tr td button{
+    font-size: 15px;
+    padding: 5px 20px 5px 20px;
+}
+
+.tambahData table tr td img, .editData table tr td img{
+    width: 80px;
+    height: 80px;
+}
+
+#role {
+    margin-right: 10px;
+}
+
+.redButton {
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    background-color: #A71238;
+    color: white;
+    border: 1px solid #A71238;
+}
+.redButton:hover {
+    color: #A71238;
+    background-color: white;
+}

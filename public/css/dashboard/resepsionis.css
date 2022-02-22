@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Julius+Sans+One&family=Redressed&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    width: 1600px;
+    height: 767px;
+    background-color: #f3f3f3;
+}
+
+.contain {
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+    padding-bottom: 32px;
+}
+
+.homeContain {
+    width: auto;
+    height: 20px;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid #c0c0c0;
+}
+
+.homeContain h1 {
+    color: black;
+    float: left;
+    margin-left: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+}
+
+.homeContain span {
+    float: right;
+    margin-right: 20px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 15px;
+}
+
+.searchBar {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchNama {
+    width: 250px;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid #BAA090;
+    border-radius: 2%;
+    font-size: 14px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.searchTgl {
+    width: 250px;
+    padding: 3px 15px 3px 15px;
+    border: 2px solid #BAA090;
+    border-radius: 2%;
+    font-size: 14px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.searchBar div button {
+    font-size: 14px;
+    padding: 4px 15px 4px 15px;
+}
+
+.redButton {
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    background-color: #A71238;
+    color: white;
+    border: 1px solid #A71238;
+}
+.redButton:hover {
+    color: #A71238;
+    background-color: white;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+}
+
+.table table {
+    width: 863px;
+}
+
+.dataTable {
+    width: auto;
+    height: auto;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.displayNone {
+    display: none;
+}
+
+.dataTable h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.dataTable table {
+    margin-top: 10px;
+    border: 2px solid #BAA090;
+    border-radius: 2%;
+    background-color: white;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.dataTable table tr th {
+    text-align: center;
+    font-size: 16px;
+}
+
+.dataTable table tr td {
+    padding: 20px 38px 20px 38px;
+    font-size: 14px;
+}
+
+.resetSearch {
+    width: 863px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.resetSearch span {
+    font-family: 12px;
+    cursor: pointer;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    transition: 0.5s;
+}
+
+.resetSearch span:hover {
+    color: #A71238;
+}
