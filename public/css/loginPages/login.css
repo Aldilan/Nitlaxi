@@ -6,12 +6,12 @@
 }
 
 .container {
-    width: 1600px;
+    width: 100%;
     height: auto;
 }
 
 .menus {
-    width: 1600px;
+    width: 100%;
     height: auto;
     position: sticky;
     top: 0;
@@ -21,7 +21,7 @@
 .pages {
     padding: 9px 0px 9px 0px;
     background-color: #000F2A;
-    width: 1600px;
+    width: 100%;
     height: 20px;
 }
 
@@ -42,10 +42,10 @@
     transition: 0.3s;
 }
 .pages ul li a:hover {
-    text-shadow: 0 0 3px whitesmoke;
+    text-shadow: 0 0 3px white;
 }
 .active {
-    text-shadow: 0 0 3px whitesmoke;
+    text-shadow: 0 0 3px white;
 }
 
 .booking {
@@ -223,15 +223,15 @@
 }
 
 .footer {
-    width: 1600px;
-    height: 60px;
+    width: 100%;
+    height: 61px;
     background-color: #A71238;
     display: flex;
 }
 
 .footerLeft{
-    width: 550px;
-    height: 60px;
+    width: 35%;
+    height: 100%;
     background-color: #080C2C;;
 }
 
@@ -263,8 +263,8 @@
 .footerMid{
     padding-top: 20px;
     text-align: center;
-    width: 500px;
-    height: 40px;
+    width: 30%;
+    height: 41px;
     background-color: #080C2C;;
 }
 
@@ -276,8 +276,8 @@
 }
 
 .footerRight{
-    width: 550px;
-    height: 60px;
+    width: 35%;
+    height: 100%;
     background-color: #080C2C;;
 }
 

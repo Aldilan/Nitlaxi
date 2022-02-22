@@ -6,14 +6,14 @@
 }
 
 .container {
-    width: 1600px;
+    width: 100%;
     height: auto;
     display: flex;
 }
 
 .sidebar {
-    width: 300px;
-    height: 767px;
+    width: 18%;
+    height: 100%;
     position: sticky;
     top: 0;
     transition: 0.5s;
@@ -21,7 +21,7 @@
 }
 
 .marginLeftSidebar {
-    margin-left: -240px;
+    margin-left: -14%;
 }
 
 .rotateArrowSidebar {
@@ -29,7 +29,7 @@
 }
 
 .headerSidebar {
-    width: 270px;
+    width: 90%;
     height: 30px;
     background-color: #080C2C;
     padding: 15px;
@@ -70,11 +70,10 @@
 }
 
 .sidebarLeft {
-    width: 210px;
+    width: 75%;
     height: 100%;
     background-color:  #000F2A;
     float: left;
-    padding: 0px 15px 0px 15px;
 }
 
 .sidebarLeft ul {
@@ -90,6 +89,7 @@
     font-family: 'Julius Sans One', sans-serif;
     color: #BAA090;
     transition: 0.5s;
+    margin-left: 5%;
 }
 
 .sidebarLeft ul li a:hover {
@@ -101,10 +101,9 @@
 }
 
 .sidebarRight {
-    width: 30px;
+    width: 25%;
     height: 100%;
     background-color:  #000F2A;
-    padding: 0px 15px 0px 15px;
     float: right;
 }
 
@@ -119,6 +118,7 @@
 .sidebarRight ul li a img {
     width: 30px;
     height: 30px;
+    margin-left: 35%;
 }
 
 .sidebarRight ul li a img:hover {
@@ -142,15 +142,73 @@
 }
 
 .contain {
-    width: 1300px;
+    width: 85%;
     height: auto;
     background-color: #F3F3F3;
     transition: 0.5s;
     padding-bottom: 32px;
 }
 
+.dropdownProfileLink {
+    cursor: pointer;
+}
+
+.dropdownProfile {
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: white;
+    border: 2px solid #888888;
+    border-radius: 2%;
+    top: 6%;
+    left: 93%;
+}
+
+.dropdownProfileSlide {
+    top: 6%;
+    left: 92%;
+}
+
+.dropdownProfile ul {
+    list-style: none;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.dropdownProfile ul li {
+    padding: 10px 20px 10px 20px;
+}
+
+.dropdownProfile ul li:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888888;
+}
+
+.dropdownProfile ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdownProfile ul li a, .dropdownProfile ul li button {
+    transition: 0.3s;
+}
+
+.dropdownProfile ul li a:hover, .dropdownProfile ul li button:hover {
+    opacity: 30%;
+}
+
+.dropdownProfile ul li button {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: transparent;
+    border: 0px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px ;
+}
+
 .containSlide {
-    width: 1540px;
+    width: 96%;
 }
 
 .successNotif {
@@ -230,7 +288,7 @@
 
 .headerContain span, .homeContain span {
     float: right;
-    margin-right: 20px;
+    margin-right: 60px;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 15px;
 }

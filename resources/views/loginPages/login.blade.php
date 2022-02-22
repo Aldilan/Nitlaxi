@@ -16,7 +16,7 @@
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
-                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
                 </ul>
             </div>
             <div class="booking">

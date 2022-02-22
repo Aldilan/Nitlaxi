@@ -131,3 +131,38 @@ const closeButton = document.querySelector('#closeNotif');
 closeButton.addEventListener('click',function () {
     closeButton.parentElement.classList.add('displayNone')
 })
+
+//function dropdown profile
+const dropdownProfileLink = document.querySelector('.dropdownProfileLink')
+const dropdownProfile = document.querySelector('.dropdownProfile')
+
+dropdownProfileLink.addEventListener('mouseenter',function (e) {
+    dropdownProfile.classList.remove('displayNone')
+})
+dropdownProfileLink.addEventListener('mouseleave',function (e) {
+    dropdownProfile.classList.add('displayNone')
+})
+dropdownProfile.addEventListener('mouseenter',function (e) {
+    dropdownProfile.classList.remove('displayNone')
+})
+dropdownProfile.addEventListener('mouseleave',function (e) {
+    dropdownProfile.classList.add('displayNone')
+})
+
+//function map
+function initMap() {
+    //options map
+    let options = {
+        zoom:12,
+        center:{lat:-6.7311989,lng:106.797352}
+    }
+
+    //new map
+    let map = new google.maps.Map(document.getElementById('map'), options)
+
+    //marker map
+    let marker = new google.maps.Marker({
+        position:{lat:-6.7311989,lng:106.797352},
+        map:map,
+    })
+}

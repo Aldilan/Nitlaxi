@@ -60,10 +60,12 @@ const sidebarButton = document.querySelector('.headerSidebar a');
 const contain = document.querySelector('.contain');
 const dataTable = document.querySelector('.dataTable');
 const notifs = document.querySelectorAll('#notif')
+const dropdownProfile = document.querySelector('.dropdownProfile')
 sidebarButton.addEventListener('click', function(e) {
     e.preventDefault()
     e.target.classList.toggle('rotateArrowSidebar')
     sidebarButton.parentElement.parentElement.classList.toggle('marginLeftSidebar');
+    dropdownProfile.classList.toggle('dropdownProfileSlide')
     if (classContain != "homeContain") {
         dataTable.classList.toggle('dataTableSlide')
     }
@@ -354,4 +356,20 @@ editDataLinks.forEach(function (editDataLink) {
             }
         })
     })
+})
+
+//function dropdown profile
+const dropdownProfileLink = document.querySelector('.dropdownProfileLink')
+
+dropdownProfileLink.addEventListener('mouseenter',function (e) {
+    dropdownProfile.classList.remove('displayNone')
+})
+dropdownProfileLink.addEventListener('mouseleave',function (e) {
+    dropdownProfile.classList.add('displayNone')
+})
+dropdownProfile.addEventListener('mouseenter',function (e) {
+    dropdownProfile.classList.remove('displayNone')
+})
+dropdownProfile.addEventListener('mouseleave',function (e) {
+    dropdownProfile.classList.add('displayNone')
 })

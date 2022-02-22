@@ -43,7 +43,7 @@
                 @foreach($struks as $struk)
                     @foreach($rooms as $room)
                         @if($room->nama_kamar == $struk->tipe_kamar)
-                            <li>{{$room->harga}}</li>
+                            <li>IDR. {{$room->harga}}</li>
                             @php
                                 $i = $i + $room->harga
                             @endphp
@@ -54,7 +54,7 @@
             </div>
             <div class="struk containStruk2">
                 <span>Total</span>
-                <span>
+                <span>IDR. 
                     @php
                         echo $i
                     @endphp

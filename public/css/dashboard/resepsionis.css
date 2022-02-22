@@ -6,7 +6,7 @@
 }
 
 .container {
-    width: 1600px;
+    width: 100%;
     height: 767px;
     background-color: #f3f3f3;
 }
@@ -35,9 +35,62 @@
 
 .homeContain span {
     float: right;
-    margin-right: 20px;
+    margin-right: 60px;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 15px;
+}
+
+.dropdownProfileLink {
+    cursor: pointer;
+}
+
+.dropdownProfile {
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: white;
+    border: 2px solid #888888;
+    border-radius: 2%;
+    top: 6%;
+    left: 91.4%;
+}
+
+.dropdownProfile ul {
+    list-style: none;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.dropdownProfile ul li {
+    padding: 10px 20px 10px 20px;
+}
+
+.dropdownProfile ul li:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888888;
+}
+
+.dropdownProfile ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdownProfile ul li a, .dropdownProfile ul li button {
+    transition: 0.3s;
+}
+
+.dropdownProfile ul li a:hover, .dropdownProfile ul li button:hover {
+    opacity: 30%;
+}
+
+.dropdownProfile ul li button {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: transparent;
+    border: 0px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px ;
 }
 
 .searchBar {

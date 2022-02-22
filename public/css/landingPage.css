@@ -6,12 +6,12 @@
 }
 
 .container {
-    width: 1600px;
+    width: 100%;
     height: auto;
 }
 
-.headers {
-    width: 1600px;
+.headers { 
+    width: 100%;
     height: 728px;
     background-image: url('/img/nitlaxi2.jpg');
     background-size: cover;
@@ -35,14 +35,15 @@
 }
 
 .header1 {
-    width: 1600px;
+    width: 100%;
     height: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .icon {
-    width: 320px;
+    width: 20%;
     height: 200px;
-    float: left;
 }
 
 .icon img {
@@ -52,9 +53,8 @@
 }
 
 .header {
-    width: 960px;
+    width: 60%;
     height: 200px;
-    float: left;
 }
 .header ul {
     text-align: center;
@@ -80,9 +80,8 @@
 }
 
 .langNLog {
-    width: 320px;
+    width: 20%;
     height: 200px;
-    float: left;
 }
 
 .langNLog ul {
@@ -99,7 +98,7 @@
     cursor: default;
 }
 
-.langNLog ul li button {
+.langNLog ul li button{
     font-family: 'Alegreya Sans SC', sans-serif;
     background-color: transparent;
     border: 0px;
@@ -112,8 +111,57 @@
     border-bottom: 1px solid white;
 }
 
+.dropdownProfile {
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: #F3F3F3;
+    border: 2px solid #888888;
+    border-radius: 2%;
+    top: 7%;
+    left: 92%;
+}
+
+.dropdownProfile ul {
+    list-style: none;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.dropdownProfile ul li {
+    padding: 10px 20px 10px 20px;
+}
+
+.dropdownProfile ul li:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888888;
+}
+
+.dropdownProfile ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdownProfile ul li a, .dropdownProfile ul li button {
+    transition: 0.3s;
+}
+
+.dropdownProfile ul li a:hover, .dropdownProfile ul li button:hover {
+    opacity: 30%;
+}
+
+.dropdownProfile ul li button {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    background-color: transparent;
+    border: 0px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px ;
+}
+
 .menus {
-    width: 1600px;
+    width: 100%;
     height: auto;
     position: sticky;
     top: 0;
@@ -123,7 +171,7 @@
 .pages {
     padding: 9px 0px 9px 0px;
     background-color: #000F2A;
-    width: 1600px;
+    width: 100%;
     height: auto;
 }
 
@@ -144,10 +192,10 @@
     transition: 0.3s;
 }
 .pages ul li a:hover {
-    text-shadow: 0 0 3px whitesmoke;
+    text-shadow: 0 0 3px white;
 }
 .active {
-    text-shadow: 0 0 3px whitesmoke;
+    text-shadow: 0 0 3px white;
 }
 
 .booking {
@@ -222,7 +270,7 @@
     height: auto;
 }
 
-.containRight img {
+#map {
     width: 320px;
     height: 320px;
 }
@@ -476,14 +524,14 @@
 
 .footer {
     margin-top: 30px;
-    width: 1600px;
+    width: 100%;
     height: 60px;
     background-color: #A71238;
     display: flex;
 }
 
 .footerLeft{
-    width: 550px;
+    width: 35%;
     height: 60px;
     background-color: #080C2C;;
 }
@@ -516,7 +564,7 @@
 .footerMid{
     padding-top: 20px;
     text-align: center;
-    width: 500px;
+    width: 30%;
     height: 40px;
     background-color: #080C2C;;
 }
@@ -529,7 +577,7 @@
 }
 
 .footerRight{
-    width: 550px;
+    width: 35%;
     height: 60px;
     background-color: #080C2C;;
 }

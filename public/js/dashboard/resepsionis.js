@@ -64,3 +64,20 @@ resetSearchButton.addEventListener('click',function (e) {
     removeDiplayNoneTr()
     resetSearch.classList.add('displayNone')
 })
+
+//function dropdown profile
+const dropdownProfileLink = document.querySelector('.dropdownProfileLink')
+const dropdownProfile = document.querySelector('.dropdownProfile')
+
+dropdownProfileLink.addEventListener('mouseenter',function (e) {
+    dropdownProfile.classList.remove('displayNone')
+})
+dropdownProfileLink.addEventListener('mouseleave',function (e) {
+    dropdownProfile.classList.add('displayNone')
+})
+dropdownProfile.addEventListener('mouseenter',function (e) {
+    dropdownProfile.classList.remove('displayNone')
+})
+dropdownProfile.addEventListener('mouseleave',function (e) {
+    dropdownProfile.classList.add('displayNone')
+})

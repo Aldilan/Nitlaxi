@@ -41,8 +41,19 @@
     </div>
     <div class="contain">
         <div class="homeContain">
-            <a href="/"><h1>Dashboard Admin</h1></a>
-            <span>{{Auth::user()->username}}</span>
+            <h1>Dashboard Admin</h1>
+            <span class="dropdownProfileLink">{{Auth::user()->username}}</span>
+        </div>
+        <div class="dropdownProfile displayNone">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button>Logout</button>
+                    </form>
+                </li>
+            </ul>
         </div>
         <div class="GNQContain">
             <h1 id="greeting"></h1>

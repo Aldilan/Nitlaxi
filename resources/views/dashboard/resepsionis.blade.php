@@ -12,8 +12,19 @@
 <div class="container">
     <div class="contain">
         <div class="homeContain">
-            <a href="/"><h1>Dashboard Resepsionis</h1></a>
-            <span>{{Auth::user()->username}}</span>
+            <h1>Dashboard Resepsionis</h1>
+            <span class="dropdownProfileLink">{{Auth::user()->username}}</span>
+        </div>
+        <div class="dropdownProfile displayNone">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button>Logout</button>
+                    </form>
+                </li>
+            </ul>
         </div>
         <div class="dataTable">
             <h1>Tabel Reservasi</h1>

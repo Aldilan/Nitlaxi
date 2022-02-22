@@ -25,6 +25,7 @@
                     <button id="closeNotif">X</button>
                 </div>
             @endif
+            <input type="hidden" id="closeNotif">
             <div class="header1">
                 <div class="icon">
                     <a href="">
@@ -33,21 +34,8 @@
                 </div>
                 <div class="header">
                     <ul>
-                        @auth
-                            @if(Auth::user()->role == 'admin')
-                                <li><a href="/admin"><h1>HOTEL INDONESIA NITLAXI BOGOR</h1></a></li>
-                                <li><small>Bogor, Indoensia</small></li>
-                            @elseif(Auth::user()->role == 'resepsionis')
-                                <li><a href="/resepsionis"><h1>HOTEL INDONESIA NITLAXI BOGOR</h1></a></li>
-                                <li><small>Bogor, Indoensia</small></li>
-                            @else
-                                <li><h1>HOTEL INDONESIA NITLAXI BOGOR</h1></li>
-                                <li><small>Bogor, Indoensia</small></li>
-                            @endif
-                        @else
-                            <li><h1>HOTEL INDONESIA NITLAXI BOGOR</h1></li>
-                            <li><small>Bogor, Indoensia</small></li>
-                        @endauth
+                        <li><h1>HOTEL INDONESIA NITLAXI BOGOR</h1></li>
+                        <li><small>Bogor, Indoensia</small></li>
                     </ul>
                 </div>
                 <div class="langNLog">
@@ -55,16 +43,41 @@
                         <li><span>Language</span></li>
                         @auth
                             <li>
-                                <form action="/logout" method="post">
-                                    @csrf
-                                    <button>Logout</button>
-                                </form>
+                                <button class="dropdownProfileLink">{{Auth::user()->username}}</button>
                             </li>
                         @else
-                            <li><a href="/login"><button>Login</button></a></li>
+                            <li>
+                                <button class="dropdownProfileLink">Login</button>
+                            </li>
                         @endauth
                     </ul>
                 </div>
+                @auth
+                <div class="dropdownProfile displayNone">
+                    <ul>
+                        <li><a href="/struk">struk</a></li>
+                        @if(Auth::user()->role == 'admin')
+                        <li><a href="/admin">Admin</a></li>
+                        @elseif(Auth::user()->role == 'resepsionis')
+                        <li><a href="/resepsionis">Resepsionis</a></li>
+                        @else
+                        @endif
+                        <li>
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button>Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                @else
+                <div class="dropdownProfile displayNone">
+                    <ul>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/signup">Daftar</a></li>
+                    </ul>
+                </div>
+                @endauth
             </div>
         </div>
         <div class="menus">
@@ -74,7 +87,7 @@
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
-                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
                     @auth
                         <li><a href="/struk">STRUK</a></li>
                     @endauth
@@ -122,7 +135,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="containRight">
-                <img src="/img/maps.png" alt="">
+                <div id="map"></div>
             </div>
         </div>
         <div class="roomNSuites">
@@ -224,12 +237,7 @@
         </div>
     </div>
 
-    @if(session()->has('successPayment'))
-        <script>
-            alert('Pembayaran berhasil, struk ada di halaman profile')
-        </script>
-    @endif
-
     <script src="/js/landingPage.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYalh-Ugn8rSd5g6aaTeD-pmj4HMROSdo&callback=initMap&libraries=&v=weekly" async></script>
 </body>
 </html>

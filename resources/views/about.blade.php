@@ -16,7 +16,7 @@
                     <li><a href="/about" class="active">ABOUT</a></li>
                     <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
-                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
                     @auth
                         <li><a href="/struk">STRUK</a></li>
                     @endauth
