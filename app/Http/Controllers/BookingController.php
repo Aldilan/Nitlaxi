@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
+    public function index() {
+        return back();
+    }
+
     public function booking(Request $request) {
         $kamar = $request->ruangan;
         $checkIn = $request->tgl_check_in;
