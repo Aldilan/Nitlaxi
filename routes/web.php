@@ -28,22 +28,25 @@ Route::get('/about', [AboutController::class, 'index']);
 Route::get('/room&Suites', [RNSController::class, 'index']);
 
 //admin
-Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('isAdmin');
-//tambah data admin
-Route::post('/admin/tambahUser', [AdminController::class, 'tambahUser'])->middleware('isAdmin');
-Route::post('/admin/tambahKamar', [AdminController::class, 'tambahKamar']);
-Route::post('/admin/tambahFasilitasKamar', [AdminController::class, 'tambahFasilitasKamar'])->middleware('isAdmin');
-Route::post('/admin/tambahFasilitasHotel', [AdminController::class, 'tambahFasilitasHotel'])->middleware('isAdmin');
-//edit data admin
-Route::post('/admin/editUser', [AdminController::class, 'editUser'])->middleware('isAdmin');
-Route::post('/admin/editRoom', [AdminController::class, 'editRoom'])->middleware('isAdmin');
-Route::post('/admin/editRoomFacility', [AdminController::class, 'editRoomFacility'])->middleware('isAdmin');
-Route::post('/admin/editHotelFacility', [AdminController::class, 'editHotelFacility'])->middleware('isAdmin');
-//hapus data admin
-route::get('/admin/deleteUser/{id}', [AdminController::class, 'deleteUser'])->middleware('isAdmin');
-route::get('/admin/deleteRoom/{id}', [AdminController::class, 'deleteRoom'])->middleware('isAdmin');
-route::get('/admin/deleteRoomFacility/{id}', [AdminController::class, 'deleteRoomFacility'])->middleware('isAdmin');
-route::get('/admin/deleteHotelFacility/{id}', [AdminController::class, 'deleteHotelFacility'])->middleware('isAdmin');
+
+Route::controller(AdminController::class)->group(function() {
+    Route::get('/admin', 'index')->name('admin')->middleware('isAdmin');
+   //tambah data admin
+   Route::post('/admin/tambahUser', 'tambahUser')->middleware('isAdmin');
+   Route::post('/admin/tambahKamar', 'tambahKamar')->middleware('isAdmin');
+   Route::post('/admin/tambahFasilitasKamar', 'tambahFasilitasKamar')->middleware('isAdmin');
+   Route::post('/admin/tambahFasilitasHotel', 'tambahFasilitasHotel')->middleware('isAdmin');
+   //edit data admin
+   Route::post('/admin/editUser', 'editUser')->middleware('isAdmin');
+   Route::post('/admin/editRoom', 'editRoom')->middleware('isAdmin');
+   Route::post('/admin/editRoomFacility', 'editRoomFacility')->middleware('isAdmin');
+   Route::post('/admin/editHotelFacility', 'editHotelFacility')->middleware('isAdmin');
+   //hapus data admin
+   route::get('/admin/deleteUser/{id}', 'deleteUser')->middleware('isAdmin');
+   route::get('/admin/deleteRoom/{id}', 'deleteRoom')->middleware('isAdmin');
+   route::get('/admin/deleteRoomFacility/{id}', 'deleteRoomFacility')->middleware('isAdmin');
+   route::get('/admin/deleteHotelFacility/{id}', 'deleteHotelFacility')->middleware('isAdmin');
+});
 
 Route::get('/resepsionis', [ResepsionisController::class, 'index'])->name('resepsionis')->middleware('isResepsionis');
 
