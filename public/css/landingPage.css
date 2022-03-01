@@ -3,6 +3,7 @@
 * {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 .container {
@@ -13,7 +14,7 @@
 .headers { 
     width: 100%;
     height: 728px;
-    background-image: url('/img/nitlaxi2.jpg');
+    background-image: url('/img/lphead1.jpg');
     background-size: cover;
     box-shadow: 0px -90px 60px #000F2A inset;
     animation: fadePhotos 16s ease-in-out infinite;
@@ -21,16 +22,16 @@
 
 @keyframes fadePhotos {
     0%,100% {
-        background-image: url('/img/nitlaxi2.jpg');
+        background-image: url('/img/lphead2.jpg');
     }
     25% {
-        background-image: url('/img/nitlaxi3.jpg');
+        background-image: url('/img/lphead3.jpg');
     }
     50% {
-        background-image: url('/img/nitlaxi2.jpg');
+        background-image: url('/img/lphead1.jpg');
     }
     75% {
-        background-image: url('/img/nitlaxi3.jpg');
+        background-image: url('/img/lphead2.jpg');
     }
 }
 
@@ -164,6 +165,7 @@
     width: 100%;
     height: auto;
     position: sticky;
+    z-index: 99;
     top: 0;
     margin-bottom: 40px;
 }
@@ -242,12 +244,14 @@
 
 .contains {
     margin: auto;
-    width: 1280px;
+    width: 100%;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .containLeft {
-    float: left;
     width: 893px;
     height: auto;
     border-right: 1px solid black;
@@ -277,7 +281,7 @@
 
 .roomNSuites {
     margin: auto;
-    width: 1600px;
+    width: 100%;
     height: auto;
     background-color: #F3F3F3;
     padding: 20px 0px 20px 0px;
@@ -319,19 +323,20 @@
 }
 
 .RNS {
-    width: 500%;
+    width: 100%;
     height: auto;
     display: flex;
+    justify-content: center;
 }
 
 .RNSContainer {
-    width: 1600px;
+    width: 100%;
     height: 400px;
 }
 
 .RNSContain {
     margin: auto;
-    width: 1440px;
+    width: 100%;
     height: auto;
     display: flex;
     margin-top: 20px;
@@ -407,7 +412,7 @@
 
 .offers {
     margin: auto;
-    width: 1280px;
+    width: 80%;
     height: 590px;
     overflow: hidden;
     margin-top: 80px;
@@ -443,7 +448,7 @@
 }
 
 .slide img {
-    width: 1280px;
+    width: 100%;
     height: 500px;
 }
 
@@ -565,7 +570,7 @@
     padding-top: 20px;
     text-align: center;
     width: 30%;
-    height: 40px;
+    height: 60px;
     background-color: #080C2C;;
 }
 

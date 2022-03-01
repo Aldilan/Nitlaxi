@@ -19,7 +19,9 @@
                     <li><a href="/">GALLERY</a></li>
                     <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
                     @auth
+                    @if(Auth::user()->role == 'customer')
                         <li><a href="/struk">STRUK</a></li>
+                    @endif
                     @endauth
                 </ul>
             </div>

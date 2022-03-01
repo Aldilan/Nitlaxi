@@ -7,16 +7,22 @@ function realTime() {
     // let meridiem = 'AM';
     // let dayName = now.getDay();
     let dayNum = now.getDate();
+    let dayNumOut = dayNum + 1;
+    if (dayNumOut > 0 && dayNumOut < 10) {
+        dayNumOut = '0' + dayNumOut 
+    }
+    if (dayNum > 0 && dayNum < 10) {
+        dayNum = '0' + dayNum
+    }
     let month = now.getMonth();
     month += 1;
     if (month > 0 && month < 10) {
         month = `0` + month
     }
-    let dayNumOut = dayNum + 1;
     let year = now.getFullYear();
     let tgl = year+`-`+month+`-`+dayNum;
     let tglOut = year+`-`+month+`-`+dayNumOut;
-
+    
     // if (hour == 0) {
     //     hour = 12;
     // }

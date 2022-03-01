@@ -3,11 +3,12 @@
 * {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 .container {
     width: 100%;
-    height: 727px;
+    height: 100vh;
     padding: 70px 0px 20px 0px;
     background-color: #f3f3ff;
 }
@@ -22,6 +23,11 @@
 .backArrow a img {
     width: 30px;
     height: 30px;
+    transition: 0.4s;
+}
+
+.backArrow a img:hover {
+    opacity: 60%;
 }
 
 .contain {

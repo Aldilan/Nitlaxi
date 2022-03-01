@@ -56,7 +56,9 @@
                 @auth
                 <div class="dropdownProfile displayNone">
                     <ul>
+                        @if(Auth::user()->role == 'customer')
                         <li><a href="/struk">struk</a></li>
+                        @endif
                         @if(Auth::user()->role == 'admin')
                         <li><a href="/admin">Admin</a></li>
                         @elseif(Auth::user()->role == 'resepsionis')
@@ -90,7 +92,9 @@
                     <li><a href="/">GALLERY</a></li>
                     <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
                     @auth
+                    @if(Auth::user()->role == 'customer')
                         <li><a href="/struk">STRUK</a></li>
+                    @endif
                     @endauth
                 </ul>
             </div>
@@ -120,8 +124,8 @@
                             @endforeach>
                         </select>
                     </li>
-                    <li><input type="date" name="tgl_check_in" id="tgl_check_in" placeholder="CHECK IN"></li>
-                    <li><input type="date" name="tgl_check_out" id="tgl_check_out" placeholder="CHECK OUT"></li>
+                    <li><input type="date" name="" id="tgl_check_in" placeholder="CHECK IN"></li>
+                    <li><input type="date" name="" id="tgl_check_out" placeholder="CHECK OUT"></li>
                     <li><a href="/login"><button class="redButton">BOOK NOW</button></a></li>
                 </ul>
             @endauth
@@ -188,10 +192,10 @@
                     <input type="radio" name="radio-btn" id="radio4">
 
                     <div class="slide first">
-                        <img src="/img/nitlaxi.jpeg" alt="">
+                        <img src="/img/nitlaxi1.jpg" alt="">
                     </div>
                     <div class="slide">
-                        <img src="/img/nitlaxi2.jpg" alt="">
+                        <img src="/img/nitlaxi2.jpeg" alt="">
                     </div>
                     <div class="slide">
                         <img src="/img/nitlaxi3.jpg" alt="">

@@ -351,6 +351,8 @@
     height: 60px;
     background-color: #A71238;
     display: flex;
+    position: fixed;
+    top: 93%;
 }
 
 .footerLeft{

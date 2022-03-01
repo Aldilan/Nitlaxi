@@ -61,4 +61,4 @@ Route::post('/signup', [SignupController::class, 'store'])->middleware('isnUser'
 Route::post('/booking', [BookingController::class, 'booking'])->middleware('isCustomer');
 Route::get('/booking', [BookingController::class, 'index'])->middleware('isCustomer');
 Route::get('/struk', [BookingController::class, 'struk'])->middleware('isCustomer') ;
-Route::post('/struk', [BookingController::class, 'isCustomer']);
+Route::post('/struk', [BookingController::class, 'createStruk']);
