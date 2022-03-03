@@ -19,11 +19,11 @@ class BookingController extends Controller
         $kamar = $request->ruangan;
         $checkIn = $request->tgl_check_in;
         $checkOut = $request->tgl_check_out;
-        $room = Room::where('nama_kamar',$kamar)->get();
-        $fasilitasId = $room[0]->fasilitas_id;
+        $roomz = Room::where('nama_kamar',$kamar)->get();
+        $fasilitasId = $roomz[0]->fasilitas_id;
         $fasilitas = RoomFacility::where('id',$fasilitasId)->get();
         $rooms = Room::all();
-        return view('booking',compact('kamar','checkIn','checkOut','room', 'fasilitas', 'rooms'));
+        return view('booking',compact('kamar','checkIn','checkOut','roomz', 'fasilitas', 'rooms'));
     }
 
     public function createStruk(Request $request) {

@@ -13,9 +13,10 @@
         <div class="menus">
             <div class="pages">
                 <ul>
+                    <li id="booking">Booking</li>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/about">ABOUT</a></li>
-                    <li><a href="/room&Suites" class="active">ROOM</a></li>
+                    <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
                     <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
                     @auth
@@ -23,6 +24,7 @@
                         <li><a href="/struk">STRUK</a></li>
                     @endif
                     @endauth
+                    <li id="menus"><img src="/img/icon/menu.png" alt=""></li>
                 </ul>
             </div>
             <div class="booking">
@@ -32,8 +34,8 @@
                 <ul>
                     <li>
                         <select name="ruangan" id="">
-                            @foreach($rooms as $roomz)
-                            <option value="{{$roomz->nama_kamar}}">{{$roomz->nama_kamar}}</option>
+                            @foreach($rooms as $room)
+                            <option value="{{$room->nama_kamar}}">{{$room->nama_kamar}}</option>
                             @endforeach
                         </select>
                     </li>
@@ -46,8 +48,8 @@
                 <ul>
                     <li>
                         <select name="" id="">
-                            @foreach($rooms as $roomz)
-                            <option value="{{$roomz->nama_kamar}}">{{$roomz->nama_kamar}}</option>
+                            @foreach($rooms as $room)
+                            <option value="{{$room->nama_kamar}}">{{$room->nama_kamar}}</option>
                             @endforeach>
                         </select>
                     </li>
@@ -58,18 +60,31 @@
             @endauth
             </div>
         </div>
+        <div class="menuSlide">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/room&Suites">ROOM</a></li>
+                <li><a href="/">GALLERY</a></li>
+                <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
+                @auth
+                @if(Auth::user()->role == 'customer')
+                    <li><a href="/struk">STRUK</a></li>
+                @endif
+                @endauth
+            </ul>
+        </div>
     <form action="/struk" method="post">
     @csrf
-        @foreach($room as $kamar)
+        @foreach($roomz as $room)
         <div class="headerContain">
-            <h1>Hasil Pencarian : {{$kamar->nama_kamar}}</h1>
+            <h1>Hasil Pencarian : {{$room->nama_kamar}}</h1>
         </div>
         <div class="contain">
             <div class="headContain">
-                <h1>{{$kamar->nama_kamar}}</h1>
+                <h1>{{$room->nama_kamar}}</h1>
                 <ul>
                     <li>Advanteges</li>
-                    <li>Capacity</li>
                     <li>No. off Room</li>
                     <li>Price</li>
                 </ul>
@@ -77,7 +92,7 @@
             @foreach($fasilitas as $fasilitas)
             <div class="bookingContain">
                 <div class="imgBooking">
-                    <img src="/storage/{{$kamar->foto}}" alt="">
+                    <img src="/storage/{{$room->foto}}" alt="">
                     <ul>
                         <li>Luas kamar: {{$fasilitas->luas_kamar}}</li>
                         <li><a href="/room&Suites"><button type="button" class="redButton">DETAIL ROOM</button></a></li>
@@ -95,14 +110,8 @@
                                 </ol>
                             </li>
                             <li>
-                                <ol id="capacityRoom">
-                                    <li>Max adult : 2</li>
-                                    <li>Max child : 0</li>
-                                </ol>
-                            </li>
-                            <li>
                                 <select name="" id="noRoom">
-                                    @for($i = 1; $i < $kamar->jumlah_kamar+1; $i++)
+                                    @for($i = 1; $i < $room->jumlah_kamar+1; $i++)
                                     <option value="">Room {{$i}}</option>
                                     @endfor
                                 </select>
@@ -110,11 +119,11 @@
                         </ul>
                     </div>
                     <div class="detailBooking2">
-                        <h1>{{$kamar->harga}}</h1>
+                        <h1>{{$room->harga}}</h1>
                         <small>/room/night</small>
                     </div>
                     <div class="detailBooking3">
-                        @if($kamar->jumlah_kamar >0)
+                        @if($room->jumlah_kamar >0)
                         <p>Room info: 
                             <span class="ava">available</span>
                         </p>
@@ -177,7 +186,7 @@
                 <img src="/img/pgUp.png" alt="">
             </div>
         </div>
-        <input type="hidden" name="tipe_kamar" value="{{$kamar->nama_kamar}}">
+        <input type="hidden" name="tipe_kamar" value="{{$room->nama_kamar}}">
         <input type="hidden" name="nama_pemesan" value="{{Auth()->user()->username}}">
         <input type="hidden" name="nama_tamu" value="{{Auth()->user()->name}}">
         <input type="hidden" name="email" value="{{Auth()->user()->email}}">

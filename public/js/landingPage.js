@@ -77,7 +77,7 @@ pgUp()
 const gallery = document.querySelectorAll('.pages ul li a')[3];
 gallery.addEventListener('click', function (e) {
     e.preventDefault()
-    window.scrollTo({ top: 1800, behavior: 'smooth'});
+    window.scrollTo({ top: 1700, behavior: 'smooth'});
 })
 
 //function page up
@@ -172,3 +172,17 @@ function initMap() {
         map:map,
     })
 }
+
+
+
+//function menu and booking slide
+const menus = document.getElementById('menus')
+const menusSlide = document.querySelector('.menuSlide')
+menus.addEventListener('click', function (e) {
+    menusSlide.classList.toggle('menuSlideResponse')
+    if(menusSlide.className == 'menuSlide menuSlideResponse') {
+        e.target.setAttribute('src','/img/icon/x.png')
+    }else{
+        e.target.setAttribute('src','/img/icon/menu.png')
+    }
+})

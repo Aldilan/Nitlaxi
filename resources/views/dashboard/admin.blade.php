@@ -73,29 +73,32 @@
             @endif
             <input type="hidden" id="notif">
             <input type="hidden" id="closeNotif">
-        <div class="cardContain">
-            <img src="/img/icon/profile.png" alt="">
-            <h1>Pengguna Aktif</h1>
-            <p>{{$countUser}} pengguna</p>
-            <a href=""><small id="detailProfile">Lihat Detail</small></a>
-        </div>
-        <div class="cardContain">
-            <img src="/img/icon/door.png" alt="">
-            <h1>Banyak Ruangan</h1>
-            <p>{{$countRoom}} ruangan</p>
-            <a href=""><small id="detailRoom">Lihat Detail</small></a>
-        </div>
-        <div class="cardContain">
-            <img src="/img/icon/bed.png" alt="">
-            <h1>Tipe Fasilitas Kamar</h1>
-            <p>{{$countRoomFacility}} tipe</p>
-            <a href=""><small id="detailRoomFacility">Lihat Detail</small></a>
-        </div>
-        <div class="cardContain">
-            <img src="/img/icon/swing.png" alt="">
-            <h1>Banyak Fasilitas Hotel</h1>
-            <p>{{$countHotelFacility}} fasilitas</p>
-            <a href=""><small id="detailHotelFacility">Lihat Detail</small></a>
+        <div class="contains">
+            <div class="cardContain">
+                <img src="/img/icon/profile.png" alt="">
+                <h1>Pengguna Aktif</h1>
+                <p>{{$countUser}} pengguna</p>
+                <a href=""><small id="detailProfile">Lihat Detail</small></a>
+            </div>
+            <div class="cardContain">
+                <img src="/img/icon/door.png" alt="">
+                <h1>Banyak Ruangan</h1>
+                <p>{{$countRoom}} ruangan</p>
+                <a href=""><small id="detailRoom">Lihat Detail</small></a>
+            </div>
+            <div class="cardContain">
+                <img src="/img/icon/bed.png" alt="">
+                <h1>Tipe Fasilitas Kamar</h1>
+                <p>{{$countRoomFacility}} tipe</p>
+                <a href=""><small id="detailRoomFacility">Lihat Detail</small></a>
+            </div>
+            <div class="cardContain">
+                <img src="/img/icon/swing.png" alt="">
+                <h1>Banyak Fasilitas Hotel</h1>
+                <p>{{$countHotelFacility}} fasilitas</p>
+                <a href=""><small id="detailHotelFacility">Lihat Detail</small></a>
+            </div>
+
         </div>
         <div class="tableUser dataTable displayNone">
             <h1>Tabel User</h1>

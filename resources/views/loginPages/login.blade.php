@@ -13,11 +13,18 @@
         <div class="menus">
             <div class="pages">
                 <ul>
+                    <li id="booking">Login</li>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
                     <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
+                    @auth
+                    @if(Auth::user()->role == 'customer')
+                        <li><a href="/struk">STRUK</a></li>
+                    @endif
+                    @endauth
+                    <li id="menus"><img src="/img/icon/menu.png" alt=""></li>
                 </ul>
             </div>
             <div class="booking">
@@ -53,6 +60,20 @@
             @endauth
             </div>
         </div>
+        <div class="menuSlide">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about" class="active">ABOUT</a></li>
+                <li><a href="/room&Suites">ROOM</a></li>
+                <li><a href="/">GALLERY</a></li>
+                <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
+                @auth
+                @if(Auth::user()->role == 'customer')
+                    <li><a href="/struk">STRUK</a></li>
+                @endif
+                @endauth
+            </ul>
+        </div>
         <div class="contain">
             <ul>
                 <li><h1>MASUK</h1></li>
@@ -69,6 +90,7 @@
                     <button id="closeNotif">X</button>
                 </div>
             @endif
+            <input type="hidden" id="closeNotif">
             <span>Untuk pemesanan lebih cepat di kemudian hari, simpan data pribadi, preferensi, dan informasi kartu loyalitas Anda, serta selalu dapatkan berita terbaru melalui buletin kami, dan jangan sekali-kali menyebar username dan password ke orang lain termasuk karyawan Nitlaxi, terkecuali jika sudah ada informasi resmi sebelumnya (Informasi ini biasa dikirim ke email yang sudah didaftarkan)</span>
             <table>
             <form action="/login" method="post">

@@ -13,11 +13,18 @@
         <div class="menus">
             <div class="pages">
                 <ul>
+                    <li id="booking">Signup</li>
                     <li><a href="/">HOME</a></li>
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
                     <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
+                    @auth
+                    @if(Auth::user()->role == 'customer')
+                        <li><a href="/struk">STRUK</a></li>
+                    @endif
+                    @endauth
+                    <li id="menus"><img src="/img/icon/menu.png" alt=""></li>
                 </ul>
             </div>
             <div class="booking">
@@ -52,6 +59,20 @@
                 </ul>
             @endauth
             </div>
+        </div>
+        <div class="menuSlide">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about" class="active">ABOUT</a></li>
+                <li><a href="/room&Suites">ROOM</a></li>
+                <li><a href="/">GALLERY</a></li>
+                <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
+                @auth
+                @if(Auth::user()->role == 'customer')
+                    <li><a href="/struk">STRUK</a></li>
+                @endif
+                @endauth
+            </ul>
         </div>
         <div class="contain">
             <ul>

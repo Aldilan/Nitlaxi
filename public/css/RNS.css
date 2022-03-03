@@ -3,325 +3,988 @@
 * {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 .container {
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 
-.menus {
-    width: 100%;
-    height: auto;
-    position: sticky;
-    top: 0;
-    margin-bottom: 40px;
+@media(min-width:320px) and (max-width:767px) {
+    
+
+    .menus {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+    }
+    
+    .pages {
+        background-color: #000F2A;
+        padding: 10px 10px 0px 10px;
+        width: 100%;
+        height: 40px;
+    }
+    
+    .pages ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pages ul li:not(:last-child):not(:first-child) {     
+        display: none;
+    }
+
+    #booking {
+        color: white;
+        font-size: 20px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+    }
+
+    #menus img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .booking {
+        margin: auto;
+        width: 100%;
+        padding: 13px 0px 10px 0px;
+        background-color: white;
+        border: 1px solid #000F2A;
+        border-top: 0px;
+    }
+    
+    .booking ul {
+        list-style: none;
+        text-align: center;
+    }
+    .booking ul li {
+        padding: 4px 20px;
+    }
+    .booking ul li input {
+        padding: 6px;
+    }
+    .booking ul li select {
+        padding: 8px 25px;
+    }
+    .booking ul li button {
+        background-color: #A71238;
+        color: white;
+        padding: 7px;
+        border: 1px solid #A71238;
+        cursor: pointer;
+    }
+    .redButton {
+        transition: 0.5s;
+        cursor: pointer;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        background-color: #A71238;
+        color: white;
+        border: 1px solid #A71238;
+    }
+    .redButton:hover {
+        color: #A71238;
+        background-color: white;
+    }
+    
+    .menuSlide {
+        margin-top: -260px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: -1;
+        transition: 1s;
+    }
+
+    .menuSlideResponse {
+        margin-top: 0;
+
+    }
+    
+    .menuSlide ul {
+        list-style: none;
+    }
+
+    .menuSlide ul li {
+        border-top: 1px solid rgba(0, 0, 0, 0.418);
+        padding: 10px;
+    }
+
+    .menuSlide ul li a {
+        margin-left: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        color: black;
+    }
+    
+    .contain {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+        
+    .contain h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    .contain ul {
+        list-style: none;
+    }
+    
+    .rns {
+        margin: auto;
+        background-color: #F3F3F3;
+        width: 280px;
+        height: 520px;
+        margin-bottom: 10px;
+    }
+    
+    .rns img {
+        width: 280px;
+        height: 260px;
+    }
+    
+    .rns ul {
+        margin-left: 20px;
+        list-style: none;
+    }
+    
+    .rns ul li {
+        margin-top: 30px;
+    }
+    
+    .rns ul li button {
+        margin-top: 35px;
+        border: 2px solid #000F2A;
+        background-color: transparent;
+        color: #000F2A;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .rns ul li button:hover {
+        background-color: #000F2A;
+        color: white;
+    }
+    
+    .modalContainer {
+        width: 95%;
+        height: 95vh;
+        margin: auto;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 2px solid #000F2A;
+        border-radius: 1%;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+    
+    .showModal {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .modalHead {
+        padding: 20px 17px 20px 17px;
+        height: auto;
+        border-bottom: 1px solid #000F2A;
+    }
+    
+    .modalHead h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 18px;
+    }
+    
+    .modalContain {
+        padding: 20px 17px 30px 17px;
+        height: auto;
+    }
+    
+    .modalContain img {
+        width: 70%;
+        height: 20vh;
+        margin-bottom: 10px;
+    }
+    
+    .modalContain ul {
+        list-style: none;
+        margin-left: 5px;
+    }
+    
+    .modalContain ul li {
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li h1{
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 20px;
+        color: #A71238;
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li small {
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li span {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #A71238;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 20px;
+    }
+    
+    .modalLiP {
+        padding-top: 20px;
+    }
+    
+    .modalLiP p {
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    }
+    
+    .buttonClose {
+        background-color: #A71238;
+        color: white;
+        padding: 7px;
+        border: 1px solid #A71238;
+        transition: 0.4s;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    
+    .buttonClose:hover {
+        color: #A71238;
+        background-color: white;
+    }
+    
+    .footer {
+        margin-top: 30px;
+        width: 100%;
+        background-color: #A71238;
+    }
+    
+    .footerLeft{
+        margin: auto;
+        width: 100%;
+        height: 60px;
+        background-color: #080C2C;;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footerLeft ul {
+        margin: 20px 0px 0px 0px;
+        list-style: none;
+    
+    }
+    
+    .footerLeft ul:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .footerLeft ul li a img {
+        width: 20px;
+        height: 20px;
+        transition: 0.5s;
+    }
+    
+    .footer ul li a img:hover {
+        opacity: 50%;
+    }
+    
+    .footerMid{
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+        height: 60px;
+        background-color: #080C2C;;
+    }
+    
+    .footerMid span{
+        color: #BAA090;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 13px;
+        cursor: default;
+    }
+    
+    .footerRight{
+        width: 100%;
+        height: 60px;
+        background-color: #080C2C;
+        text-align: center;
+    }
+    
+    .footerRight span {
+        font-size: 20px;
+        color: #BAA090;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    }
+    .footerRight img {
+        width: 20px;
+        height: 20px;
+        margin: 20px 0px 0px 60px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .footerRight img:hover {
+        width: 24px;
+        height: 24px;
+        margin: 16px 0px 0px 58px;
+    }
+    
 }
 
-.pages {
-    padding: 9px 0px 9px 0px;
-    background-color: #000F2A;
-    width: 100%;
-    height: 20px;
+@media(min-width:678px) and (max-width:1023px) {
+    
+    .menus {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+        margin-bottom: 40px;
+    }
+    
+    .pages {
+        background-color: #000F2A;
+        padding-top: 10px;
+        width: 100%;
+        height: 40px;
+    }
+    
+    .pages ul {
+        list-style: none;
+        text-align: center;
+    }
+    .pages ul li {
+        color: white;
+        font-size: 20px;
+        display: inline-block;
+        margin: 0px 20px 0px 20px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    .pages ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+    .pages ul li a:hover {
+        text-shadow: 0 0 3px white;
+    }
+    .active {
+        text-shadow: 0 0 3px white;
+    }
+    #booking, #menus, .menuSlide {
+        display: none;
+    }
+    
+    
+    .booking {
+        margin: auto;
+        width: 700px;
+        padding: 12px;
+        background-color: white;
+        border: 1px solid #000F2A;
+        border-top: 0px;
+    }
+    
+    .booking ul {
+        list-style: none;
+        text-align: center;
+    }
+    .booking ul li {
+        display: inline-block;
+    }
+    .booking ul li input {
+        padding: 6px;
+    }
+    .booking ul li select {
+        padding: 7px;
+    }
+    .booking ul li button {
+        background-color: #A71238;
+        color: white;
+        padding: 7px;
+        border: 1px solid #A71238;
+        cursor: pointer;
+    }
+    .redButton {
+        transition: 0.5s;
+        cursor: pointer;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        background-color: #A71238;
+        color: white;
+        border: 1px solid #A71238;
+    }
+    .redButton:hover {
+        color: #A71238;
+        background-color: white;
+    }
+    
+    .contain {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+        
+    .contain h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    .contain ul {
+        list-style: none;
+    }
+    
+    .rns {
+        background-color: #F3F3F3;
+        width: 300px;
+        height: 560px;
+        float: left;
+        margin: 20px;
+    }
+    
+    .rns img {
+        width: 300px;
+        height: 280px;
+    }
+    
+    .rns ul {
+        margin-left: 20px;
+        list-style: none;
+    }
+    
+    .rns ul li {
+        margin-top: 30px;
+    }
+    
+    .rns ul li button {
+        margin-top: 35px;
+        border: 2px solid #000F2A;
+        background-color: transparent;
+        color: #000F2A;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .rns ul li button:hover {
+        background-color: #000F2A;
+        color: white;
+    }
+    
+    .modalContainer {
+        width: 95%;
+        height: 90vh;
+        margin: auto;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 2px solid #000F2A;
+        border-radius: 1%;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+    
+    .showModal {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .modalHead {
+        padding: 20px 17px 20px 17px;
+        height: auto;
+        border-bottom: 1px solid #000F2A;
+    }
+    
+    .modalHead h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 18px;
+    }
+    
+    .modalContain {
+        padding: 20px 17px 30px 17px;
+        height: auto;
+        display: flex;
+    }
+    
+    .modalContain img {
+        width: 70%;
+        height: 70vh;
+    }
+    
+    .modalContain ul {
+        list-style: none;
+        margin-left: 30px;
+    }
+    
+    .modalContain ul li {
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li h1{
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 20px;
+        color: #A71238;
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li small {
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li span {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #A71238;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 20px;
+    }
+    
+    .modalLiP {
+        padding-top: 20px;
+    }
+    
+    .modalLiP p {
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    }
+    
+    .buttonClose {
+        background-color: #A71238;
+        color: white;
+        padding: 7px;
+        border: 1px solid #A71238;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    
+    .buttonClose:hover {
+        color: #A71238;
+        background-color: white;
+    }
+  
+    .footer {
+        margin-top: 30px;
+        width: 100%;
+        height: 60px;
+        background-color: #A71238;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footerLeft{
+        width: 35%;
+        height: 60px;
+        background-color: #080C2C;;
+    }
+    
+    .footerLeft ul {
+        margin: 20px 0px 0px 0px;
+        display: inline-block;
+        list-style: none;     
+    
+    }
+    
+    .footerLeft ul:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .footerImgFirst {
+        margin-left: 100px;
+    }
+    
+    .footerLeft ul li a img {
+        width: 20px;
+        height: 20px;
+        transition: 0.5s;
+    }
+    
+    .footer ul li a img:hover {
+        opacity: 50%;
+    }
+    
+    .footerMid{
+        padding-top: 20px;
+        text-align: center;
+        width: 30%;
+        height: 60px;
+        background-color: #080C2C;;
+    }
+    
+    .footerMid span{
+        color: #BAA090;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 13px;
+        cursor: default;
+    }
+    
+    .footerRight{
+        width: 35%;
+        height: 60px;
+        background-color: #080C2C;
+        text-align: center;
+    }
+    
+    .footerRight span {
+        font-size: 20px;
+        color: #BAA090;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    }
+    .footerRight img {
+        width: 20px;
+        height: 20px;
+        margin: 20px 0px 0px 60px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .footerRight img:hover {
+        width: 24px;
+        height: 24px;
+        margin: 16px 0px 0px 58px;
+    }
 }
 
-.pages ul {
-    list-style: none;
-    text-align: center;
-}
-.pages ul li {
-    color: white;
-    font-size: 20px;
-    display: inline-block;
-    margin: 0px 50px 0px 50px;
-    font-family: 'Alegreya Sans SC', sans-serif;
-}
-.pages ul li a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-.pages ul li a:hover {
-    text-shadow: 0 0 3px white;
-}
-.active {
-    text-shadow: 0 0 3px white;
-}
+@media(min-width:1024px) and (max-width:1600px) {
 
-.booking {
-    margin: auto;
-    width: 700px;
-    padding: 12px;
-    background-color: white;
-    border: 1px solid #000F2A;
-    border-top: 0px;
-}
+    .menus {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+        margin-bottom: 40px;
+    }
+    
+    .pages {
+        background-color: #000F2A;
+        padding-top: 10px;
+        width: 100%;
+        height: 40px;
+    }
+    
+    .pages ul {
+        list-style: none;
+        text-align: center;
+    }
+    .pages ul li {
+        color: white;
+        font-size: 20px;
+        display: inline-block;
+        margin: 0px 50px 0px 50px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    .pages ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+    .pages ul li a:hover {
+        text-shadow: 0 0 3px white;
+    }
+    .active {
+        text-shadow: 0 0 3px white;
+    }
+    
+    #booking, #menus, .menuSlide {
+        display: none;
+    }
+    
+    
+    .booking {
+        margin: auto;
+        width: 700px;
+        padding: 12px;
+        background-color: white;
+        border: 1px solid #000F2A;
+        border-top: 0px;
+    }
+    
+    .booking ul {
+        list-style: none;
+        text-align: center;
+    }
+    .booking ul li {
+        display: inline-block;
+    }
+    .booking ul li input {
+        padding: 6px;
+    }
+    .booking ul li select {
+        padding: 7px;
+    }
+    .booking ul li button {
+        background-color: #A71238;
+        color: white;
+        padding: 7px;
+        border: 1px solid #A71238;
+        cursor: pointer;
+    }
+    .redButton {
+        transition: 0.5s;
+        cursor: pointer;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        background-color: #A71238;
+        color: white;
+        border: 1px solid #A71238;
+    }
+    .redButton:hover {
+        color: #A71238;
+        background-color: white;
+    }
+    
+    .contain {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+        
+    .contain h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        margin-bottom: 30px;
+    }
+    
+    .contain ul {
+        list-style: none;
+    }
+    
+    .rns {
+        background-color: #F3F3F3;
+        width: 320px;
+        height: 560px;
+        float: left;
+        margin: 20px;
+    }
+    
+    .rns img {
+        width: 320px;
+        height: 280px;
+    }
+    
+    .rns ul {
+        margin-left: 20px;
+        list-style: none;
+    }
+    
+    .rns ul li {
+        margin-top: 30px;
+    }
+    
+    .rns ul li button {
+        margin-top: 35px;
+        border: 2px solid #000F2A;
+        background-color: transparent;
+        color: #000F2A;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .rns ul li button:hover {
+        background-color: #000F2A;
+        color: white;
+    }
+    
+    .modalContainer {
+        width: 95%;
+        height: 90vh;
+        margin: auto;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 2px solid #000F2A;
+        border-radius: 1%;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+    
+    .showModal {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .modalHead {
+        padding: 20px 17px 20px 17px;
+        height: auto;
+        border-bottom: 1px solid #000F2A;
+    }
+    
+    .modalHead h1 {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 18px;
+    }
+    
+    .modalContain {
+        padding: 20px 17px 30px 17px;
+        height: auto;
+        display: flex;
+    }
+    
+    .modalContain img {
+        width: 70%;
+        height: 70vh;
+    }
+    
+    .modalContain ul {
+        list-style: none;
+        margin-left: 30px;
+    }
+    
+    .modalContain ul li {
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li h1{
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 20px;
+        color: #A71238;
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li small {
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .modalContain ul li span {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #A71238;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 20px;
+    }
+    
+    .modalLiP {
+        padding-top: 20px;
+    }
+    
+    .modalLiP p {
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    }
+    
+    .buttonClose {
+        background-color: #A71238;
+        color: white;
+        padding: 7px;
+        border: 1px solid #A71238;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    
+    .buttonClose:hover {
+        color: #A71238;
+        background-color: white;
+    }
+  
+    .footer {
+        margin-top: 30px;
+        width: 100%;
+        height: 60px;
+        background-color: #A71238;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footerLeft{
+        width: 35%;
+        height: 60px;
+        background-color: #080C2C;;
+    }
+    
+    .footerLeft ul {
+        margin: 20px 0px 0px 0px;
+        display: inline-block;
+        list-style: none;     
+    
+    }
+    
+    .footerLeft ul:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .footerImgFirst {
+        margin-left: 200px;
+    }
+    
+    .footerLeft ul li a img {
+        width: 20px;
+        height: 20px;
+        transition: 0.5s;
+    }
+    
+    .footer ul li a img:hover {
+        opacity: 50%;
+    }
+    
+    .footerMid{
+        padding-top: 20px;
+        text-align: center;
+        width: 30%;
+        height: 60px;
+        background-color: #080C2C;;
+    }
+    
+    .footerMid span{
+        color: #BAA090;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        font-size: 13px;
+        cursor: default;
+    }
+    
+    .footerRight{
+        width: 35%;
+        height: 60px;
+        background-color: #080C2C;
+        text-align: center;
+    }
+    
+    .footerRight span {
+        font-size: 20px;
+        color: #BAA090;
+        font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    }
+    .footerRight img {
+        width: 20px;
+        height: 20px;
+        margin: 20px 0px 0px 60px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .footerRight img:hover {
+        width: 24px;
+        height: 24px;
+        margin: 16px 0px 0px 58px;
+    }
+    
 
-.booking ul {
-    list-style: none;
-    text-align: center;
-}
-.booking ul li {
-    display: inline-block;
-}
-.booking ul li input {
-    padding: 6px;
-}
-.booking ul li select {
-    padding: 7px;
-}
-.booking ul li button {
-    background-color: #A71238;
-    color: white;
-    padding: 7px;
-    border: 1px solid #A71238;
-    cursor: pointer;
-}
-.redButton {
-    transition: 0.5s;
-    cursor: pointer;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    background-color: #A71238;
-    color: white;
-    border: 1px solid #A71238;
-}
-.redButton:hover {
-    color: #A71238;
-    background-color: white;
-}
-
-.contain {
-    width: 1200px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-}
-
-.contain h1 {
-    font-family: 'Julius Sans One', sans-serif;
-    margin-bottom: 30px;
-}
-
-.contain ul {
-    list-style: none;
-}
-
-.rns {
-    background-color: #F3F3F3;
-    width: 280px;
-    height: 560px;
-    float: left;
-    margin: 0px 10px 60px 10px;
-}
-
-.rns img {
-    width: 280px;
-    height: 280px;
-}
-
-.rns ul {
-    list-style: none;
-}
-
-.rns ul li {
-    margin-top: 30px;
-}
-
-.rns ul li button {
-    margin-top: 35px;
-    border: 2px solid #000F2A;
-    background-color: transparent;
-    color: #000F2A;
-    padding: 10px 20px 10px 20px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.rns ul li button:hover {
-    background-color: #000F2A;
-    color: white;
-}
-
-.modalContainer {
-    width: 1100px;
-    height: 700px;
-    margin: auto;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border: 2px solid #000F2A;
-    border-radius: 1%;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s;
-}
-
-.showModal {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-.modalHead {
-    width: 1066px;
-    padding: 20px 17px 20px 17px;
-    height: auto;
-    border-bottom: 1px solid #000F2A;
-}
-
-.modalHead h1 {
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 18px;
-}
-
-.modalContain {
-    width: 1056px;
-    padding: 20px 17px 30px 17px;
-    height: auto;
-    display: flex;
-}
-
-.modalContain img {
-    width: 700px;
-    height: 560px;
-}
-
-.modalContain ul {
-    list-style: none;
-    margin-left: 30px;
-}
-
-.modalContain ul li {
-    margin-bottom: 20px;
-}
-
-.modalContain ul li h1{
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 20px;
-    color: #A71238;
-    margin-bottom: 20px;
-}
-
-.modalContain ul li small {
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.modalContain ul li span {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #A71238;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 20px;
-}
-
-.modalLiP {
-    padding-top: 20px;
-}
-
-.modalLiP p {
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-}
-
-.buttonClose {
-    background-color: #A71238;
-    color: white;
-    padding: 7px;
-    border: 1px solid #A71238;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.buttonClose:hover {
-    color: #A71238;
-    background-color: white;
-}
-
-.footer {
-    margin-top: 30px;
-    width: 100%;
-    height: 60px;
-    background-color: #A71238;
-    display: flex;
-    justify-content: center;
-}
-
-.footerLeft{
-    width: 35%;
-    height: 60px;
-    background-color: #080C2C;;
-}
-
-.footerLeft ul {
-    margin: 20px 0px 0px 0px;
-    display: inline-block;
-    list-style: none;     
-
-}
-
-.footerLeft ul:not(:last-child) {
-    margin-right: 20px;
-}
-
-.footerImgFirst {
-    margin-left: 200px;
-}
-
-.footerLeft ul li a img {
-    width: 20px;
-    height: 20px;
-    transition: 0.5s;
-}
-
-.footer ul li a img:hover {
-    opacity: 50%;
-}
-
-.footerMid{
-    padding-top: 20px;
-    text-align: center;
-    width: 30%;
-    height: 40px;
-    background-color: #080C2C;;
-}
-
-.footerMid span{
-    color: #BAA090;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 13px;
-    cursor: default;
-}
-
-.footerRight{
-    width: 35%;
-    height: 60px;
-    background-color: #080C2C;;
-}
-
-.footerRight span {
-    font-size: 20px;
-    color: #BAA090;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-}
-
-#hour {
-    margin-left: 340px;
-}
-
-.footerRight img {
-    width: 20px;
-    height: 20px;
-    margin: 20px 0px 0px 60px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.footerRight img:hover {
-    width: 24px;
-    height: 24px;
-    margin: 16px 0px 0px 58px;
 }

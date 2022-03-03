@@ -86,7 +86,8 @@
         <div class="menus">
             <div class="pages">
                 <ul>
-                    <li><a href="/" class="active">HOME</a></li>
+                    <li id="booking">Home</li>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/room&Suites">ROOM</a></li>
                     <li><a href="/">GALLERY</a></li>
@@ -96,6 +97,7 @@
                         <li><a href="/struk">STRUK</a></li>
                     @endif
                     @endauth
+                    <li id="menus"><img src="/img/icon/menu.png" alt=""></li>
                 </ul>
             </div>
             <div class="booking">
@@ -124,12 +126,47 @@
                             @endforeach>
                         </select>
                     </li>
-                    <li><input type="date" name="" id="tgl_check_in" placeholder="CHECK IN"></li>
-                    <li><input type="date" name="" id="tgl_check_out" placeholder="CHECK OUT"></li>
+                    <li><input type="date" name="tgl_check_in" id="tgl_check_in" placeholder="CHECK IN"></li>
+                    <li><input type="date" name="tgl_check_out" id="tgl_check_out" placeholder="CHECK OUT"></li>
                     <li><a href="/login"><button class="redButton">BOOK NOW</button></a></li>
                 </ul>
             @endauth
             </div>
+        </div>
+        <div class="menuSlide">
+            <ul>
+                @auth    
+                    @if(Auth::user()->role == 'customer')
+                    <li><a href="/struk">struk</a></li>
+                    @endif
+                    @if(Auth::user()->role == 'admin')
+                    <li><a href="/admin">Admin</a></li>
+                    @elseif(Auth::user()->role == 'resepsionis')
+                    <li><a href="/resepsionis">Resepsionis</a></li>
+                    @else
+                    @endif
+                    <li>
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button>Logout</button>
+                        </form>
+                    </li>
+                @else
+                    <li>
+                        <button class="dropdownProfileLink">Login</button>
+                    </li>
+                @endauth
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/room&Suites">ROOM</a></li>
+                <li><a href="/">GALLERY</a></li>
+                <li><a href="https://bit.ly/nitwa">CONTACT US</a></li>
+                @auth
+                @if(Auth::user()->role == 'customer')
+                    <li><a href="/struk">STRUK</a></li>
+                @endif
+                @endauth
+            </ul>
         </div>
         <div class="contains">
             <div class="containLeft">
@@ -180,7 +217,7 @@
             @endforeach
             </div>
         <div class="offers">
-            <div class="headSlider">
+            <div class="headSlider" id="gallery">
                 <h1>Our Gallery</h1>
                 <small>A feeling You have never experienced before. Get our hotel facilities</small>
             </div>

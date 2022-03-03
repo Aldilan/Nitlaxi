@@ -80,3 +80,15 @@ const closeButton = document.querySelector('.buttonClose');
 closeButton.addEventListener('click', function () {
     modal.classList.remove('showModal');
 })
+
+//function menu and booking slide
+const menus = document.getElementById('menus')
+const menusSlide = document.querySelector('.menuSlide')
+menus.addEventListener('click', function (e) {
+    menusSlide.classList.toggle('menuSlideResponse')
+    if(menusSlide.className == 'menuSlide menuSlideResponse') {
+        e.target.setAttribute('src','/img/icon/x.png')
+    }else{
+        e.target.setAttribute('src','/img/icon/menu.png')
+    }
+})
