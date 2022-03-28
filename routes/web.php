@@ -62,3 +62,4 @@ Route::post('/booking', [BookingController::class, 'booking'])->middleware('isCu
 Route::get('/booking', [BookingController::class, 'index'])->middleware('isCustomer');
 Route::get('/struk', [BookingController::class, 'struk'])->middleware('isCustomer') ;
 Route::post('/struk', [BookingController::class, 'createStruk']);
+Route::get('/receiptdownload', [BookingController::class, 'strukPDF'])->middleware('isCustomer');

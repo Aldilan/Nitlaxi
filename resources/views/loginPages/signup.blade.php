@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/icon/favicon.png">
     <link rel="stylesheet" href="/css/loginPages/signup.css">
-    <title>Nitlaxi Hotel | Login</title>
+    <title>Nitlaxi Hotel | Register</title>
 </head>
 <body>
     <div class="container">

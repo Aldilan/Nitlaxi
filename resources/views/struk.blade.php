@@ -75,6 +75,9 @@
                     <li>Untuk Bukti Pembayaran Bisa Langsung Tunjukkan ke Resepsionis</li>
                 </ul>
             </div>
+            <div class="downloadStruk">
+                <a href="/receiptdownload"><img src="/img/pgUp.png" alt=""></a>
+            </div>
         </div>
     </div>
 </body>

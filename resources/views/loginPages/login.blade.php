@@ -109,7 +109,7 @@
                 </tr>
             </form>
             </table>
-        <small>Belum punya akun? <a href="/signup">Daftar di sini</a></small>
+            <small>Belum punya akun? <a href="/signup">Daftar di sini</a></small>
         </div>
         <div class="footer">
             <div class="footerLeft">

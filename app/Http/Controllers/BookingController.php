@@ -8,6 +8,7 @@ use App\Models\RoomFacility;
 use App\Models\Pemesanan;
 use App\Models\Resepsionis;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class BookingController extends Controller
 {
@@ -43,9 +44,16 @@ class BookingController extends Controller
     }
 
     public function struk() {
-        $struks = Pemesanan::where('nama_pemesan',Auth::user()->username)->get();
+        $struks = Pemesanan::where('nama_pemesan',auth()->user()->username)->get();
         $rooms = Room::all();
         return view('struk',compact('struks','rooms'));
+    }
 
+    public function strukPDF() {
+        $struks = Pemesanan::where('nama_pemesan',Auth::user()->username)->get();
+        $rooms = Room::all();
+        $nama_pemesan = [];
+            $pdf = PDF::loadView('test', compact('struks','rooms'));
+            return $pdf->download('reciept.pdf');
     }
 }
